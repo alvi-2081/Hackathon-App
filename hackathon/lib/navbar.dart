@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'about.dart';
+import 'profile.dart';
 import 'body.dart';
 import 'search.dart';
 
@@ -12,7 +12,7 @@ class Navbar extends StatefulWidget {
 
 class _NavbarState extends State<Navbar> {
   int _currentindex = 0;
-  final List<Widget> _children = [Body(), Search(), About()];
+  final List<Widget> _children = [Body(), Search(), Profile()];
 
   void onTappedBar(int index) {
     setState(() {

@@ -56,7 +56,7 @@ class _LoginState extends State<Login> {
               children: [
                 Image(
                     image: AssetImage("assets/cart.gif"),
-                    width: 300,
+                    width: MediaQuery.of(context).size.width,
                     height: 250),
                 SizedBox(
                   height: 5,

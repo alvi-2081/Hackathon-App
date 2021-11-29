@@ -11,64 +11,100 @@ class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            backgroundColor: Colors.white,
-            iconTheme: IconThemeData(color: Colors.redAccent)),
-        body: SingleChildScrollView(
-          child: Center(
-            child: Column(children: [
-              SizedBox(height: 20),
-              Card(
-                child: Container(
-                  width: MediaQuery.of(context).size.width * 1,
-                  height: MediaQuery.of(context).size.height * 0.35,
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        child: Image(
-                          image: AssetImage("assets/user.png"),
-                        ),
-                        radius: 60,
-                      ),
-                      SizedBox(height: 20),
-                      Text("Muhammad Abdullah Alvi",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold))
-                    ],
+      body: Column(
+        children: [
+          Container(
+              width: MediaQuery.of(context).size.width,
+              height: 220,
+              color: Colors.blue,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Center(
+                    child: CircleAvatar(
+                      child: Icon(Icons.markunread_outlined, size: 70),
+                      radius: 60,
+                    ),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Center(
+                      child: Text(
+                    "Drop line about us",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  )),
+                  Center(
+                      child: Text(
+                    "...",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25),
+                  ))
+                ],
+              )),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Center(
+                child: Icon(
+                  Icons.location_on,
+                  color: Colors.red,
                 ),
               ),
-              ListTile(
-                title: Text("Emai", style: TextStyle(color: Colors.redAccent)),
-                subtitle: Text(
-                  "email123@gmail.com",
+              SizedBox(
+                height: 20,
+              ),
+              Center(child: Text("267 JJullian Motorway, Nazimabad, Karachi")),
+              SizedBox(
+                height: 20,
+              ),
+              Center(
+                  child: Text(
+                "Open Map",
+                style: TextStyle(color: Colors.blue),
+              )),
+              SizedBox(
+                height: 20,
+              ),
+              Center(
+                child: Icon(
+                  Icons.phone_iphone,
+                  color: Colors.red,
                 ),
               ),
-              SizedBox(height: 10),
-              ListTile(
-                title: Text("Phone Number",
-                    style: TextStyle(color: Colors.redAccent)),
-                subtitle: Text(
-                  "0312345678",
+              SizedBox(
+                height: 20,
+              ),
+              Center(child: Text("0900-78601")),
+              SizedBox(
+                height: 20,
+              ),
+              Center(
+                child: Icon(
+                  Icons.timer,
+                  color: Colors.red,
                 ),
               ),
-              SizedBox(height: 10),
-              ListTile(
-                title: Text("Date of Birth",
-                    style: TextStyle(color: Colors.redAccent)),
-                subtitle: Text(
-                  "1-1-1990",
-                ),
+              SizedBox(
+                height: 20,
               ),
-              SizedBox(height: 10),
-              ListTile(
-                title: Text("City", style: TextStyle(color: Colors.redAccent)),
-                subtitle: Text(
-                  "Karachi",
-                ),
+              Center(child: Text("Monday-Friday")),
+              SizedBox(
+                height: 15,
               ),
-            ]),
+              Center(child: Text("09:00-17:00")),
+            ],
           ),
-        ));
+        ],
+      ),
+    );
   }
 }
