@@ -1,7 +1,11 @@
-# hackathon
+# SHopping=App-UI
 
 A new Flutter project.
+<img src = "images/splash.jpg" width = "300" height = "600">   
 
+<img src = "images/login.jpg" width = "300" height = "600">     <img src = "images/pass.jpg" width = "300" height = "600">
+
+<img src = "images/home.jpg" width = "300" height = "600">     <img src = "images/about.jpg" width = "300" height = "600">
 ## Getting Started
 
 This project is a starting point for a Flutter application.
