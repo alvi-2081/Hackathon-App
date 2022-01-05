@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
                     Navigator.of(context).pop();
                   },
                   child: Text(
-                    "Ok",
+                    "OK",
                     style: TextStyle(color: Colors.black),
                   ))
             ],

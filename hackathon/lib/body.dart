@@ -61,14 +61,14 @@ class _BodyState extends State<Body> {
       f_detail.add(detail[f]);
       f_price.add(price[f]);
       Get.snackbar(
-        'Added to Favourite',
-        'This Item has been Added to Favourite',
+        'Added to Favourite', 'This Item has been Added to Favourite',
         snackPosition: SnackPosition.BOTTOM,
+        // margin: EdgeInsets.only(bottom: 300)
       );
     });
   }
 
-  c_insert(int c) {
+  void c_insert(int c) {
     setState(() {
       c_product.add(product[c]);
       c_detail.add(detail[c]);
@@ -83,25 +83,27 @@ class _BodyState extends State<Body> {
       appBar: AppBar(
         centerTitle: true,
         elevation: 5,
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: Colors.redAccent),
+        backgroundColor: Colors.redAccent,
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(
           "Home Page",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
               onPressed: () {
                 Get.to(Favourite());
               },
-              icon: Icon(Icons.favorite, color: Colors.redAccent)),
+              icon: Icon(Icons.favorite, color: Colors.white)),
           Badge(
+            badgeColor: Colors.white,
+            animationType: BadgeAnimationType.scale,
             badgeContent: Text("$a"),
             child: IconButton(
                 onPressed: () {
                   Get.to(Cart());
                 },
-                icon: Icon(Icons.shopping_cart, color: Colors.redAccent)),
+                icon: Icon(Icons.shopping_cart, color: Colors.white)),
           ),
           SizedBox(
             width: 20,
@@ -112,27 +114,23 @@ class _BodyState extends State<Body> {
       drawer: Drawer(
         child: Column(
           children: [
-            DrawerHeader(
-              child: ListTile(
-                leading: CircleAvatar(
-                  child: Image(
-                    image: AssetImage("assets/user.png"),
-                  ),
-                  radius: 30,
-                ),
-                title: Text(
-                  "Username",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text("abdullahalvi@gmail.com"),
+            UserAccountsDrawerHeader(
+              currentAccountPicture: Image.asset("assets/user.png"),
+              accountName: Text("M.Abdullah Alvi"),
+              accountEmail: Text("abdullah.alvi@gmail.com"),
+              decoration: BoxDecoration(
+                color: Colors.redAccent,
               ),
             ),
             SizedBox(
               height: 8,
             ),
             ListTile(
-                leading: Icon(Icons.logout),
-                title: Text("Logout"),
+                leading: Icon(Icons.logout, color: Colors.redAccent),
+                title: Text(
+                  "Logout",
+                  style: TextStyle(color: Colors.redAccent),
+                ),
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => Login()));
@@ -141,22 +139,31 @@ class _BodyState extends State<Body> {
               height: 8,
             ),
             ListTile(
-              leading: Icon(Icons.shopping_cart),
-              title: Text("Cart"),
+              leading: Icon(Icons.shopping_cart, color: Colors.redAccent),
+              title: Text(
+                "Cart",
+                style: TextStyle(color: Colors.redAccent),
+              ),
             ),
             SizedBox(
               height: 8,
             ),
             ListTile(
-              leading: Icon(Icons.favorite),
-              title: Text("Favourite"),
+              leading: Icon(Icons.favorite, color: Colors.redAccent),
+              title: Text(
+                "Favourite",
+                style: TextStyle(color: Colors.redAccent),
+              ),
             ),
             SizedBox(
               height: 8,
             ),
             ListTile(
-                leading: Icon(Icons.info),
-                title: Text("About"),
+                leading: Icon(Icons.info, color: Colors.redAccent),
+                title: Text(
+                  "About",
+                  style: TextStyle(color: Colors.redAccent),
+                ),
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => About()));

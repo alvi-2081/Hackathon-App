@@ -11,6 +11,10 @@ class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.redAccent,
+        title: Text("About"),
+      ),
       body: Column(
         children: [
           Container(

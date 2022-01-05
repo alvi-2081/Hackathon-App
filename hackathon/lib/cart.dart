@@ -15,7 +15,13 @@ class _CartState extends State<Cart> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         title: Row(
-          children: [Text("Cart"), Icon(Icons.shopping_cart_outlined)],
+          children: [
+            Text("Cart"),
+            SizedBox(
+              width: 10,
+            ),
+            Icon(Icons.shopping_cart_outlined)
+          ],
         ),
       ),
       body: ListView.builder(
@@ -73,7 +79,7 @@ class _CartState extends State<Cart> {
                             c_product.remove(c_product[index]);
                             c_price.remove(c_price[index]);
                             c_detail.remove(c_detail[index]);
-                            a--;
+                            --a;
                           });
                         },
                       ),

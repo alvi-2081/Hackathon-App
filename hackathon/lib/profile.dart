@@ -12,8 +12,9 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.white,
-            iconTheme: IconThemeData(color: Colors.redAccent)),
+          backgroundColor: Colors.redAccent,
+          title: Text("Profile"),
+        ),
         body: SingleChildScrollView(
           child: Center(
             child: Column(children: [
